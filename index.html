@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy 1-Month Anniversary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff6fb;
+      --card:#ffffff;
+      --accent:#ff5fa2;
+      --accent-2:#ff8fb8;
+      --text:#2b2b2b;
+      --muted:#666;
+      --ring: 0 10px 25px rgba(255,95,162,.25);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 800px at 10% -10%, #ffe4f1 0%, rgba(255,228,241,0) 60%),
+        radial-gradient(900px 700px at 110% 10%, #ffe9f5 0%, rgba(255,233,245,0) 55%),
+        var(--bg);
+      color:var(--text);
+      min-height:100dvh;
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+    .container{
+      width:100%;
+      max-width:980px;
+      display:grid;
+      gap:20px;
+      grid-template-columns: 1.2fr 1fr;
+    }
+    @media (max-width: 900px){
+      .container{grid-template-columns: 1fr}
+    }
+    .hero{
+      grid-column:1 / -1;
+      text-align:center;
+      margin-bottom:4px;
+    }
+    .title{
+      font-weight:700;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing:.5px;
+      margin:6px 0 4px;
+      background: linear-gradient(90deg, var(--accent), #ff7bb2 45%, #ffb1cc);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .subtitle{
+      color:var(--muted);
+      font-size:clamp(14px, 1.9vw, 16px);
+      margin:0 0 6px;
+    }
+    .panel{
+      background: var(--card);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: var(--ring);
+      border:1px solid rgba(255,95,162,.12);
+    }
+    .uploader{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      align-items:center;
+      justify-content:center;
+      min-height:380px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .preview{
+      width:100%;
+      aspect-ratio: 4/3;
+      border-radius:14px;
+      background:#fafafa;
+      border:1px dashed rgba(0,0,0,.12);
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      position:relative;
+      isolation:isolate;
+    }
+    .preview img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:none;
+    }
+    .placeholder{
+      color:#9b9b9b;
+      font-size:14px;
+    }
+    .controls{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .btn{
+      appearance:none;
+      border:none;
+      border-radius:12px;
+      padding:10px 14px;
+      font-weight:600;
+      cursor:pointer;
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:white;
+      box-shadow: 0 8px 20px rgba(255,95,162,.35);
+      transition: transform .06s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+    .btn.secondary{
+      background:#f3f4f6;
+      color:#333;
+      box-shadow:none;
+      border:1px solid #e7e7e7;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .card{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      position:relative;
+      overflow:hidden;
+    }
+    .badge{
+      align-self:flex-start;
+      background: rgba(255,95,162,.12);
+      color: var(--accent);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.4px;
+      border:1px solid rgba(255,95,162,.18);
+    }
+    .message{
+      width:100%;
+      min-height:180px;
+      padding:14px 14px 40px;
+      border-radius:14px;
+      border:1px solid #eee;
+      outline:none;
+      resize:vertical;
+      font: inherit;
+      line-height:1.65;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .message:focus{
+      border-color: rgba(255,95,162,.5);
+      box-shadow: 0 0 0 4px rgba(255,95,162,.12);
+    }
+    .footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .counter{ font-variant-numeric: tabular-nums; }
+    .stamp{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#fff2f7;
+      border:1px solid #ffd6e7;
+      color:#ff4f98;
+      font-weight:600;
+    }
+  </style>
+  <meta property="og:title" content="Happy 1-Month Anniversary" />
+  <meta property="og:description" content="อัปโหลดรูป + เขียนการ์ด + ฟังเพลง 'รางวัล' (Youth Brush)" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ff5fa2" />
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="title">Happy 4-Month Anniversary ✨</div>
+      <p class="subtitle">ขอบคุณสำหรับ 4 เดือนนะคนเก่งอยู่ด้วยกันไปนานๆนะ</p>
+    </div>
+
+    <section class="panel" style="grid-column:1 / -1; display:flex; align-items:center; justify-content:center">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2FVAh0G6dLxeLKXNbzmYfv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <section class="panel uploader">
+      <div class="preview" id="preview">
+        <img id="previewImg" alt="preview" />
+        <div class="placeholder" id="placeholder">ยังไม่มีรูป เลือกอัปโหลดหรือลากรูปมาวางได้เลย</div>
+      </div>
+      <div class="controls">
+        <input type="file" accept="image/*" id="fileInput" hidden />
+        <button class="btn" id="chooseBtn">เลือกรูปภาพ</button>
+        <button class="btn secondary" id="clearBtn">ล้างรูป</button>
+        <button class="btn secondary" id="downloadBtn">บันทึกรูปการ์ด</button>
+      </div>
+    </section>
+
+    <section class="panel card">
+      <span class="badge">Anniversary • 4 Month</span>
+      <textarea id="message" class="message" maxlength="500" placeholder="เขียนความในใจถึงกัน...">
+(ในที่สุดเราก็พากันมาถึง 4 เดือนแล้วนะสุขสันต์วันครบรอบ)🥳 ขอบคุณนะที่เธอดูแลเขาและอยู่กับเขามาได้นานขนาดนี้ขอให้วันข้างหน้ายังมีเธออยู่นะขอโทษที่วันครบรอบผ่านๆมาเขาไม่มีของขวัญให้เธอเลยถือว่า สิ่งนี่เขาทำมันคือของขวัญในเดือนนี้ละกันนะขอบคุณอีกครั้งนะ (หมาน้อยของเขา)🐶      </textarea>
+      <div class="footer">
+        <span class="stamp">💗 Love, Us</span>
+        <span class="counter" id="counter">0/500</span>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const previewImg = document.getElementById('previewImg');
+    const placeholder = document.getElementById('placeholder');
+    const chooseBtn = document.getElementById('chooseBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const messageEl = document.getElementById('message');
+    const counterEl = document.getElementById('counter');
+    const preview = document.getElementById('preview');
+
+    function updateCounter(){
+      const len = messageEl.value.trim().length;
+      counterEl.textContent = len + "/500";
+    }
+    updateCounter();
+    messageEl.addEventListener('input', updateCounter);
+
+    chooseBtn.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const url = URL.createObjectURL(file);
+      previewImg.src = url;
+      previewImg.style.display = 'block';
+      placeholder.style.display = 'none';
+    });
+
+    clearBtn.addEventListener('click', () => {
+      fileInput.value = '';
+      previewImg.src = '';
+      previewImg.style.display = 'none';
+      placeholder.style.display = 'block';
+    });
+
+    ['dragenter','dragover'].forEach(evt =>
+      preview.addEventListener(evt, (e) => {
+        e.preventDefault(); e.stopPropagation();
+        preview.style.borderColor = 'rgba(255,95,162,.5)';
+        preview.style.boxShadow = '0 0 0 4px rgba(255,95,162,.12)';
+      })
+    );
+    ['dragleave','drop'].forEach(evt =>
+      preview.addEventListener(evt, (e) => {
+        e.preventDefault(); e.stopPropagation();
+        preview.style.borderColor = 'rgba(0,0,0,.12)';
+        preview.style.boxShadow = 'none';
+      })
+    );
+    preview.addEventListener('drop', (e) => {
+      const file = e.dataTransfer?.files?.[0];
+      if (!file) return;
+      const url = URL.createObjectURL(file);
+      previewImg.src = url;
+      previewImg.style.display = 'block';
+      placeholder.style.display = 'none';
+    });
+
+    downloadBtn.addEventListener('click', async () => {
+      if (!window.html2canvas) {
+        await new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+          s.onload = resolve;
+          s.onerror = reject;
+          document.body.appendChild(s);
+        });
+      }
+      const wrapper = document.createElement('div');
+      wrapper.style.width = '980px';
+      wrapper.style.padding = '20px';
+      wrapper.style.background = getComputedStyle(document.body).background;
+      wrapper.style.fontFamily = getComputedStyle(document.body).fontFamily;
+
+      const clone = document.querySelector('.container').cloneNode(true);
+      const originalTextarea = document.getElementById('message');
+      const clonedTextarea = clone.querySelector('#message');
+      if (clonedTextarea) {
+        const p = document.createElement('div');
+        p.style.whiteSpace = 'pre-wrap';
+        p.style.minHeight = getComputedStyle(originalTextarea).minHeight;
+        p.style.lineHeight = getComputedStyle(originalTextarea).lineHeight;
+        p.style.border = getComputedStyle(originalTextarea).border;
+        p.style.borderRadius = getComputedStyle(originalTextarea).borderRadius;
+        p.style.padding = getComputedStyle(originalTextarea).padding;
+        p.style.font = getComputedStyle(originalTextarea).font;
+        p.textContent = originalTextarea.value;
+        clonedTextarea.parentNode.replaceChild(p, clonedTextarea);
+      }
+
+      wrapper.appendChild(clone);
+      document.body.appendChild(wrapper);
+      const canvas = await window.html2canvas(wrapper, {useCORS:true, backgroundColor:null, scale:2});
+      document.body.removeChild(wrapper);
+
+      const link = document.createElement('a');
+      link.download = 'anniversary-card.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+  </script>
+</body>
+</html>
+
+
